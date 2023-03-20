@@ -37,3 +37,23 @@ class Solution {
     }
 }
 */
+
+class Solution {
+    public String convert(String s, int numRows) {
+        if(numRows<2) return s;
+        String[] sm = new String[numRows];
+        Arrays.fill(sm,"");
+        int i=0,flag=-1;
+        for(char c : s.toCharArray()){
+            sm[i] = sm[i] + c;
+             if(i == 0 || i == numRows -1) flag = - flag;
+            i += flag;
+            
+        }
+        String end = "";
+        for(String as:sm){
+                end = end + as;
+        }
+        return end;
+    }
+}
