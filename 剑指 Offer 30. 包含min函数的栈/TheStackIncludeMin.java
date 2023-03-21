@@ -12,7 +12,6 @@ class MinStack {
     
     public void pop() {
         index--;
-        in[index] = null;
     }
     
     public int top() {
@@ -20,11 +19,7 @@ class MinStack {
     }
     
     public int min() {
-        int min = in[0];
-        for(int i=0;i<=9999;i++){
-            if(in[i]==null) break;
-            if(in[i]<min) min = in[i];
-        }
+        int min = Collections.min(Arrays.asList(Arrays.copyOfRange(in,0,index)));
         return min;
     }
 }
