@@ -3,8 +3,6 @@ class Solution {
         if (board.length == 0 || board[0].length == 0) {
             return false;
         }
-        int x = 0;
-        int y = 0;
         String[] split = word.split("");
 
         for (int i = 0; i < board.length; i++) {
